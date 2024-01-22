@@ -1,4 +1,4 @@
-from character import Player, Enemy
+from character import Player
 from weapon import weapons
 import random
 import time
@@ -14,7 +14,7 @@ def main():
     enemy_name = sys.argv[2]
 
     player_1 = Player(name=player_1_name, health=100)
-    enemy = Enemy(name=enemy_name, health=100)
+    enemy = Player(name=enemy_name, health=100)
 
     while player_1.health > 2 and enemy.health > 2:
         player_1.equip(random.choice(weapons))
