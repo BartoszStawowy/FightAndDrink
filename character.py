@@ -27,14 +27,3 @@ class Player(Character):
         self.weapon = weapon
         print(f'{self.name.upper()} hit with {self.weapon.name.upper()}')
 
-
-class Enemy(Character):
-
-    def __init__(self, name, health):
-        super().__init__(name=name, health=health)
-        self.health_bar = HealthBar(self)
-
-    def equip(self, weapon):
-        self.weapon = weapon
-        print(f'{self.name.upper()} hit with {self.weapon.name.upper()}')
-
